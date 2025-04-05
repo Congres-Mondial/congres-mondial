@@ -13,56 +13,91 @@
     <body>
         <header><h1><strong>Congrès mondial</strong></h1></header>
         
-        <div class="menu-gauche">
-        <h2>Menu</h2>    
-            <nav>
-                <ul>
-                    <li><a class="section-5" href="menu-gauche/contact.html">📩 Contact</a></li>
-                    <li><a class="section-6" href="menu-gauche/aide.html">📖 Aide</a></li>
-                    <li><a class="section-7" href="menu-gauche/faq.html">❓ FAQ</a></li>
-                    <li><a class="section-8" href="menu-gauche/projets.html">📑 Projets à venir</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="container">
-            <div class="section-link">
-                <a href="outils-universitaires/accueil-outils.html" target="_blank">
-                    <div class="section-9">
-                        <h3>Outils Universitaires</h3>
-                        <img src="Images/Outils-Universitaires.png" alt="Outils Universitaires" class="icon">        
-                    </div>
-                </a>
-            </div>
-            
-            <div class="section-link">
-                <a href="stages-debouches/accueil-stages-debouches.html" target="_blank">
-                    <div class="section-10">
-                        <h3>Stages et Débouchés</h3>
-                        <img src="Images/Stage-et-débouché.png" alt="Stages et Débouchés" class="icon">
-                    </div>
-                </a>
-            </div>
-            
-            <div class="section-link">
-                <a href="espace-interne/accueil-espace-interne.html" target="_blank">
-                    <div class="section-11">
-                        <h3>Espace Interne</h3>
-                        <img src="Images/Section-Interne.png" alt="Espace Interne" class="icon">
-                    </div>
-                </a>
-            </div>
-        </div>        
-
         <main>
+            <div class="menu-gauche">
+            <h2>Menu</h2>    
+                <nav>
+                    <ul>
+                        <li><a class="section-5" href="menu-gauche/contact.html">📩 Contact</a></li>
+                        <li><a class="section-6" href="menu-gauche/aide.html">📖 Aide</a></li>
+                        <li><a class="section-7" href="menu-gauche/faq.html">❓ FAQ</a></li>
+                        <li><a class="section-8" href="menu-gauche/projets.html">📑 Projets à venir</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="container">
+                <div class="section-link">
+                    <a href="outils-universitaires/accueil-outils.html" target="_blank">
+                        <div class="section-9">
+                            <h3>Outils Universitaires</h3>
+                            <img src="Images/Outils-Universitaires.png" alt="Outils Universitaires" class="icon">        
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="section-link">
+                    <a href="stages-debouches/accueil-stages-debouches.html" target="_blank">
+                        <div class="section-10">
+                            <h3>Stages et Débouchés</h3>
+                            <img src="Images/Stage-et-débouché.png" alt="Stages et Débouchés" class="icon">
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="section-link">
+                    <a href="espace-interne/accueil-espace-interne.html" target="_blank">
+                        <div class="section-11">
+                            <h3>Espace Interne</h3>
+                            <img src="Images/Section-Interne.png" alt="Espace Interne" class="icon">
+                        </div>
+                    </a>
+                </div>
+            </div>        
+
+        
             <div>
                 <p class="section-1 em"><em>Rassembler, préserver et partager le savoir pour l’avenir de l’humanité, au service de tous, sans distinction.</em></p>
             </div>
         </main>
         
-        <aside><a href="à-propos-du-congrès-mondial.html"> 
-            <em>Qui sommes-nous ?</em>
-        </a></aside>
+        <aside>
+            <a href="à-propos-du-congrès-mondial.html"> 
+                <em>Qui sommes-nous ?</em>
+            </a>
+        </aside>
+        <aside>
+                <button id="toggle-mode">🌙 Mode Nuit</button>
+
+            <script>
+                const toggleButton = document.getElementById('toggle-mode');
+                const body = document.body;
+
+        if (localStorage.getItem('mode') === 'jour') {
+            body.classList.add('mode-jour');
+            toggleButton.textContent = '🌙 Mode Nuit';
+        } 
+        else {
+        body.classList.add('mode-nuit');
+        toggleButton.textContent = '☀️ Mode Jour';
+        }
+
+            toggleButton.addEventListener('click', () => {
+            body.classList.toggle('mode-jour');
+            body.classList.toggle('mode-nuit');
+
+        if (body.classList.contains('mode-jour')) {
+            localStorage.setItem('mode', 'jour');
+            toggleButton.textContent = '🌙 Mode Nuit';
+        } else {
+            localStorage.setItem('mode', 'nuit');
+            toggleButton.textContent = '☀️ Mode Jour';
+        }
+        });
+</script>
+        </aside>
+
+
     </body>
 
 </html>

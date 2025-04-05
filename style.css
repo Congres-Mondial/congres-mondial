@@ -240,14 +240,108 @@ nav ul {
     width: 160px;
 }
 
+body.mode-nuit {
+    background-color: #121212;
+    color: #cccccc;
+}
 
-  
+body.mode-nuit .menu-gauche {
+    background-color: #222;
+}
+
+body.mode-nuit a {
+    color: #cccccc;
+}
+
+body.mode-jour {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+body.mode-jour .menu-gauche {
+    background-color: #e0e0e096;
+}
+
+body.mode-jour a {
+    color: #1a1a1a;
+}
+
+#toggle-mode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.mode-jour #toggle-mode {
+    background-color: #dddddd69;
+    color: #000;
+}
 
 
 
+body.mode-jour {
+    background-color: #ffffff4d;
+    color: #000000;
+}
+
+body.mode-jour .section-1 em {
+    color: #000000; 
+    background-color: #f0f0f0a4;
+    border: 1px solid #aaa;
+}
+
+body.mode-jour a:hover {
+    color: #ffffff; 
+}
 
 
+h1 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+} 
 
+aside a {
+    color: #0c6600;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+body.mode-jour aside a:hover {
+    color: #ff2600;
+}
+
+body:not(.mode-jour) aside a:hover {
+    color: #66ccff;
+}
+
+body:not(.mode-jour) .section-9:hover,
+body:not(.mode-jour) .section-10:hover,
+body:not(.mode-jour) .section-11:hover {
+    color: #000000;
+}
+
+body:not(.mode-jour) .menu-gauche a {
+    color: #080808;
+}
+
+body:not(.mode-jour) .menu-gauche a:hover {
+    background-color: #333;
+    color: #ffffff;
+} 
+
+body.mode-jour .section-9,
+body.mode-jour .section-10,
+body.mode-jour .section-11 {
+    background: linear-gradient(45deg, #c99b94, #af9892);
+} 
 
 
 
